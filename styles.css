@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* يمكنك تغييره إلى left: 20px */
+    width: 50px;
+    height: 50px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 50px;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-fixed:hover {
+    transform: scale(1.1);
+}
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles - معدل */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* 🔧 الشعار الجديد */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-image {
+    height: 50px;
+    /* حجم مناسب للهيدر */
+    width: auto;
+    object-fit: contain;
+    /* يحافظ على تناسق الصورة */
+    border-radius: 8px;
+    /* حواف ناعمة */
+}
+
+
+.logo-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #ecf0f1;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #7f8c8d;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    background: url("images/IMG-20251113-WA0004.jpg") no-repeat center center/cover;
+    position: relative;
+    padding: 100px 0;
+    color: white;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* طبقة شفافة */
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    /* الصورة في الجهة اليمنى */
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+    color: #2ecc71;
+
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2ecc71;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 600px;
+    color: #43df89;
+}
+
+.hero-image img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffff;
+
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #ffff;
+
+}
+
+/* Products Section - معدل بالكامل */
+.products-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    background: #ecf0f1;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* 🔧 بطاقات المنتجات المربعة الجديدة */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔧 حاوية الصورة المربعة */
+.product-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.product-description {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* 🔧 زر الواتساب - تم التعديل */
+.whatsapp-btn {
+    display: block;
+    width: 180px;
+    padding: 12px;
+    background: #25D366;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* Services Section */
+.services-section {
+    padding: 20px 0;
+    background: #f8f9fa;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* About Section */
+.about-section {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: #1a252f;
+    color: #ecf0f1;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #3498db;
+}
+
+.call-btn {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 12px;
+    background: #e67e22;
+    /* لون برتقالي مميز للاتصال */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.call-btn:hover {
+    background: #d35400;
+}
+
+a {
+    color: #d3e71e;
+    /* لون أخضر مثل واتساب */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.map-btn {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 12px;
+    background: #8e44ad;
+    /* لون بنفسجي مميز */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.map-btn:hover {
+    background: #732d91;
+}
+
+.footer i {
+    font-size: 1.2rem;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-social h3 {
+    color: #ecf0f1;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon.instagram {
+    background-color: #e1306c;
+}
+
+.social-icon.linkedin {
+    background-color: #0077b5;
+}
+
+.social-icon.twitter {
+    background-color: #1da1f2;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+
+.footer i {
+    font-size: 1.2rem;
+}
+
+
+.copyright {
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    font-size: 0.9rem;
+    color: #95a5a6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .logo-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo-icon {
+        font-size: 1rem;
+    }
+}
+
+/* 🔧 تأثيرات إضافية للبطاقات */
+@media (min-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 40px;
+    }
+}
